@@ -1,0 +1,446 @@
+    1  sudo -i
+    2  pwd
+    3  ls
+    4  touch a b
+    5  ls
+    6  ls -l | cut -d ' ' -f1
+    7  ls -l | awk -d '6' -f1
+    8  ls -l | awk -d ' 6 ' -f1
+    9  wget 192.168.22.13:7777/a.log
+   10  myip
+   11  wget 192.168.22.13:7777/a.log
+   12  ls
+   13  cat a.log
+   14  ls -l | awk -d '{print $1}'
+   15  cat a.log | awk -d '{print $1}'
+   16  cat a.log | awk -d '{print $1}' | sort -n
+   17  cat a.log | awk -f '{print $1}' | sort -n
+   18  cat a.log | awk -d '{print $1}' | sort -n
+   19  cat a.log | awk -F '{print $1}' | sort -n
+   20  cat a.log | awk -d '{print $1}' | sort -n
+   21  cat a.log | awk -d '{print $1}' | sort |uniq -c
+   22  cat a.log | awk -d '{print $1}' | sort -n |uniq -c
+   23  cat a.log | awk -d '{print $1}' | sort -n |uniq -d
+   24  cat a.log | cut -d: -f1 | head
+   25  cat a.log | awk -d '{print $1}' | sort -n |uniq -d
+   26  cat a.log | awk '{print $1}' | sort | uniq | head
+   27  cat a.log | awk '{print $1}' | sort | uniq -c
+   28  cat a.log | awk '{print $1}' | sort | uniq -c |sort -n
+   29  cat a.log | awk '{print $7}' | sort | uniq -c |sort -n
+   30  cat a.log | awk '{print $5}' | sort | uniq -c |sort -n
+   31  cat a.log | awk '{print $6}' | sort | uniq -c |sort -n
+   32  cat a.log | awk '{print $9}' | sort | uniq -c |sort -n
+   33  cat a.log | awk '{print $8}' | sort | uniq -c |sort -n
+   34  cat a.log | awk '{print $3}' | sort | uniq -c |sort -n
+   35  cat a.log | awk '{print $4}' | sort | uniq -c |sort -n
+   36  cat a.log | awk '{print $3}' | sort | uniq -c |sort -n
+   37  cat a.log | awk '{print $5}' | sort | uniq -c |sort -n
+   38  cat a.log | awk '{print $4}' | sort | uniq -c |sort -n
+   39  cat a.log | awk '{print $7}' | sort | uniq -c |sort -n
+   40  cat a.log | awk '{print $8}' | sort | uniq -c |sort -n
+   41  cat a.log | awk '{print $7}' | sort | uniq -c |sort -n
+   42  cat a.log | awk '{print $8}' | sort | uniq -c |sort -n
+   43  cat a.log | awk '{print $7}' | sort | uniq -c |sort -n
+   44  cat a.log | awk '{print $7}' | head | tail
+   45  cat a.log | awk '{print $9}' | head | tail
+   46  cat a.log | awk '{print $14}' | head | tail
+   47  cat a.log | awk '{print $14}' |
+   48  cat a.log | awk '{print $14}' 
+   49  awk man
+   50  man awk
+   51  cat a.log | awk '{print (NF -2)}' |sort -n | head -1 
+   52  cat a.log | awk '{print (NF -2)}' |sort -n | t
+   53  cat a.log | awk '{print (NF -2)}' |sort -n | head -1 
+   54  cat a.log | awk '{print (NF -2)}' | head-1
+   55  cat a.log | awk '{print (NF -2)}' | head -1
+   56  echo $((11+11))
+   57  echo $((011+011))
+   58  nano supprime.sh
+   59  ls
+   60  supprime.sh
+   61  sh supprime.sh 
+   62  ls
+   63  nano supprime.sh
+   64  sh supprime.sh 
+   65  exit
+   66  curl www.google.com
+   67  curl -i www.google.com
+   68  curl -I www.google.com
+   69  url -i www.google.com
+   70  vim arg.sh
+   71  nano arg.sh
+   72  ls
+   73  nano arg.sh 
+   74  chmod +x arg.sh
+   75  ls -l arg.sh
+   76  sh arg.sh 
+   77  chmod 0755 arg.sh
+   78  ./arg.sh 
+   79  ./arg.sh  dtf
+   80  nano arg.sh
+   81  ./arg.sh 
+   82  nano arg.sh
+   83  ./arg.sh 
+   84  nano arg.sh
+   85  ifconfig
+   86  nano arg.sh
+   87  for i in {1..15}; do echo $i; done
+   88  ls
+   89  mkdir compress
+   90  ls
+   91  touch compress/{a,z}
+   92  ls
+   93  find compress
+   94  man tar
+   95  tar zcvf test.tar.gz compress/
+   96  ls -lrt test.tar.gz
+   97  rm -rf compress/
+   98  tar zxvf test.tar.gz
+   99  ls
+  100  tar xvf test.tar.gz
+  101  ls
+  102  rm supprime.sh 
+  103  ls
+  104  tar xvf test.tar.gz
+  105  tar tvf test.tar.gz
+  106  ls -l /mnt/c
+  107  ls -l /mnt/c/users/Guillaume/desktop
+  108  cp test.tar.gz /mnt/c/users/Guillaume/desktop
+  109  mkdir -p rendu/ex01
+  110  mkdir -p rendu/ex02
+  111  ls
+  112  ls -lrt rendu
+  113  ls rendu
+  114  cd rendu
+  115  ls
+  116  nano ex01.sh
+  117  ls ex01
+  118  ls
+  119  cd ex01
+  120  nano heure1.sh
+  121  man date
+  122  date %c
+  123  man date
+  124  date +%H%M
+  125  echo $currentdate
+  126  nano heure1.sh
+  127  sh heure1.sh 
+  128  cd ..
+  129  cd ex02
+  130  ls
+  131  sh heure2.sh
+  132  nano heure2.sh
+  133  sh heure2.sh 
+  134  nano heure2.sh
+  135  sh heure2.sh 
+  136  nano heure2.sh
+  137  sh heure2.sh 
+  138  nano heure2.sh
+  139  date 
+  140  date %H
+  141  date %H (0..23)
+  142  date %H ( 0..23)
+  143* 
+  144  nano heure2.sh
+  145  sh heure2.sh 
+  146  nano heure2.sh
+  147  sh heure2.sh 
+  148  echo $?
+  149  nano heure2.sh
+  150  date -%s
+  151  date -'%s'
+  152  date '-%s'
+  153  date --help
+  154  $date --date='@2147483647'
+  155* 
+  156  nano heure2.sh
+  157  sh heure2.sh 
+  158  nano heure2.sh
+  159  sh heure2.sh 
+  160  nano heure2.sh
+  161  sh heure2.sh 
+  162  date %p
+  163  date -u
+  164  date -u %p
+  165  date -%s
+  166  date [%s]
+  167  date -d
+  168  date [--utc]
+  169  date +%s
+  170  nano heure2.sh
+  171  sh heure2.sh
+  172  cd..$
+  173  cd ..
+  174  mkdir ex03
+  175  mkdir ex04
+  176  mkdir ex05
+  177  mkdir ex06
+  178  mkdir ex07
+  179  mkdir ex08
+  180  mkdir ex09
+  181  mkdir ex10
+  182  ls
+  183  cd ex03
+  184  ls
+  185  sh cd.sh
+  186  nano cd.sh
+  187  cd ..
+  188  cd..
+  189  cd ..
+  190  ls
+  191  cd rendu/ex03
+  192  ls
+  193  nano cd.sh
+  194  sh cd.sh
+  195  nano cd.sh
+  196  cd ..
+  197  ls
+  198  rm test/
+  199  ls
+  200  chmod +rdx
+  201  cd ex03
+  202  ls
+  203  nano cd.sh
+  204  cd ..
+  205  mkdir test
+  206  cd test
+  207  nano test.sh
+  208  sh test.sh 
+  209  cd ..
+  210  cd rendu/ex03
+  211  ls
+  212  nano cd.sh 
+  213  c d
+  214  d
+  215  cd ..
+  216  cd ex04
+  217  nano verification.sh
+  218  cd ..
+  219  cd ex03
+  220  nano cd.sh 
+  221  sh cd.sh 
+  222  nano cd.sh 
+  223  cd ..
+  224  ls
+  225  cd ex04
+  226  ls
+  227  nano verification.sh
+  228  man test
+  229  nano verification.sh
+  230  test
+  231  man tesy
+  232  man test
+  233  test -e "efface_moi"
+  234  test -e "efface_moi" | echo "0"
+  235  test -e
+  236  nano verification.sh
+  237  sh verification.sh 
+  238  cd ..
+  239  cd ex05
+  240  curl www.google.fr
+  241  nano test_curl.sh
+  242  sh test_curl.sh www.google.fr
+  243  cd ..
+  244  cd ex06
+  245  cls
+  246  clear
+  247  nano historique.sh
+  248  history | tail
+  249  history | tail -15
+  250  nano historique.sh
+  251  sh historique.sh
+  252  nano historique.sh
+  253  sh historique.sh
+  254  nano historique.sh
+  255* 
+  256  nano historique.sh
+  257  sh historique.sh
+  258  nano historique.sh
+  259  sh historique.sh
+  260  nano historique.sh
+  261  sh historique.sh
+  262  nano historique.sh
+  263  man history 
+  264  nano historique.sh
+  265  cd ..
+  266  cd ex07
+  267  5+2
+  268  nano add.sh
+  269  sh add.sh
+  270  cd ..
+  271  cd ex08
+  272  ls
+  273  echo {0..200}
+  274  nano sum200.sh
+  275  $ for i in {0..200};do echo $i;done | ./sum200.sh
+  276* 
+  277  nano sum200.sh
+  278  cd ..
+  279  cd ex09
+  280  nano mean200.sh
+  281  cd ..
+  282  cd ex08
+  283  nano sum200.sh 
+  284  $ for i in {0..200};do echo $i;done | ./sum200.sh
+  285  for i in {0..200};do echo $i;done | ./sum200.sh
+  286  chmod +x ./sum200.sh
+  287  for i in {0..200};do echo $i;done | ./sum200.sh
+  288  nano sum200.sh 
+  289  ls
+  290  nano sum200.sh c
+  291  cd ..
+  292  cd ex09
+  293  ls
+  294  nano mean200.sh 
+  295  chmod +x mean200.sh 
+  296  for i in {0..200};do echo $i;done | ./mean200.sh
+  297  cd ..
+  298  ls
+  299  tar zcvf guillaume_andronic_2019-11-05.tar.gz rendu
+  300  cp guillaume_andronic_2019-11-05.tar.gz /mnt/c/Users/Guillaume/Desktop
+  301  cd rendu/ex04
+  302  ls
+  303  nano verification.sh 
+  304  cd ..
+  305  tar zcvf guillaume_andronic_2019-11-05.tar.gz rendu
+  306  cp guillaume_andronic_2019-11-05.tar.gz /mnt/c/Users/Guillaume/Desktop
+  307  cd rendu/ex07
+  308  nano add.sh 
+  309  sh add.sh 
+  310  nano add.sh 
+  311  sh add.sh 
+  312  sh add.sh 3 2
+  313  ./add.sh 3 2
+  314  chmod +x
+  315  chmod +x ./add.sh
+  316  ./add.sh 3 2
+  317  cd ..
+  318  cd ex04
+  319  ls
+  320  nano verification.sh 
+  321  cd ..
+  322  cd ex07
+  323  ls
+  324  nano add.sh 
+  325  chmod +x ./add.sh 
+  326  ./add.sh 3 2
+  327  tar zcvf guillaume_andronic_2019-11-05.tar.gz rendu
+  328  cd ..
+  329  tar zcvf guillaume_andronic_2019-11-05.tar.gz rendu
+  330  cp guillaume_andronic_2019-11-05.tar.gz /mnt/c/Users/Guillaume/Desktop
+  331  cd rendu/ex05
+  332  nano test_curl.sh
+  333  date +%s
+  334  cd ..
+  335  cd ex07
+  336  ls
+  337  nano add.sh 
+  338  cd ..
+  339  tar zcvf guillaume_andronic_2019-11-05.tar.gz rendu
+  340  cp guillaume_andronic_2019-11-05.tar.gz /mnt/c/Users/Guillaume/Desktop
+  341  ssg-keygen 
+  342  ssh-keygen 
+  343  cd .ssh/
+  344  ls
+  345  ls -lrt
+  346  cat id_rsa.pub
+  347  cd ..
+  348  mkdir -p gits
+  349  /gits git clone git@github.com:guillaume-andronic/test.git
+  350  ls
+  351  cd gits
+  352  ls
+  353  git clone git@github.com:guillaume-andronic/test.git
+  354  ls
+  355  cd test/
+  356  ls
+  357  nano 
+  358  nano readme 
+  359  cat readme 
+  360  git status
+  361  git diff
+  362  git commit 
+  363  git commit readme 
+  364  git config --global user.email guillaumeandronic@gmail.com
+  365  git config --global user.name guillaume-andronic
+  366  git commit readme 
+  367  ls -la
+  368  nano fichier_a
+  369  git status
+  370  git branch
+  371  git branch branch1
+  372  git branch
+  373  git checkout branch1
+  374  git branch
+  375  git statuts
+  376  git status
+  377  git add fichier_a
+  378  git status
+  379  git commmit -m 'ajout fichier a'
+  380  git commit -m 'ajout fichier a'
+  381  git status
+  382  git push
+  383  git push --set-upstream origin branch1
+  384  git pull
+  385* 
+  386  git status
+  387  git pull
+  388  git status
+  389  ls -lrt
+  390  git branch
+  391  git branch -d branch1
+  392  git branch
+  393  git checkout -b toto
+  394  git branch
+  395  git checkout master 
+  396  git branch -d toto
+  397  nano fichier_a 
+  398  /gits git clone git@github.com:guillaume-andronic/test.git
+  399  git diff
+  400  git push 
+  401  git commit -m 'ajout cc' fichier_a
+  402  git push
+  403  git pull 
+  404  git log
+  405  git checkout 45ec61c
+  406  ls
+  407  git checkout master 
+  408  ls
+  409  git status
+  410  git stash
+  411  ls -l
+  412  git stash pop
+  413  cd ..
+  414  ls
+  415  mkdir ipssi_2019
+  416  git clone git@github.com:guillaume-andronic/ipssi_2019.git
+  417  ls 
+  418  cd ipssi_2019/
+  419  ls
+  420  nano guillaume.md
+  421  cat guillaume.md 
+  422  ls
+  423  rm guillaume.md 
+  424  ls
+  425  nano readme.md
+  426  cat README.md
+  427  nano README.md
+  428  cat readme.md
+  429  cat README.md
+  430  git commit -m 'ajout README.md' README.md
+  431  git push
+  432  /tmp cp -a ~/rendu ~/gits/ipssi_2019/.
+  433  cp -a ~/rendu ~/gits/ipssi_2019/.
+  434  ls
+  435  cd rendu/
+  436  ls
+  437  cd ..
+  438  git commit -m 'ajout ipssi_2019' ipssi_2019
+  439  git commit -m 'ajout rendu' rendu
+  440  ls
+  441  mkdir scripts
+  442  ls
+  443  cp rendu scripts
+  444  cp rendu 
+  445  cp --help
+  446  history > histo_2019-11-06.txt
