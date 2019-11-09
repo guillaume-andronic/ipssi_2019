@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
-fname = "file.txt"
-count = 0
-with open(fname, 'r') as f:
-    for line in f:
-        count += 1
-print ("Total number of lines is:", count)
+import sys
 
+file = sys.argv[1]
+
+countline=0
+with open(file) as fd:
+    for line in fd:
+        countline=countline+1
+
+print(countline)

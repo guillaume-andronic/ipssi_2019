@@ -1,14 +1,14 @@
 from calcul import division
 
-a=10
-b=4
+arg1=10
+arg2=4
 
-print(division(a, b))
+print(division(arg1, arg2))
 
 
 from calcul import multiplication
 
-a=3
-b=2
+arg1=3
+arg2=2
 
-print(multiplication(a, b))
+print(multiplication(arg1, arg2))
