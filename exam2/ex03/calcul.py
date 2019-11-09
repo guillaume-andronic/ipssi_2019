@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-def division(arg1,arg2):
-    if arg2 == 0 :
+def division(argument1,argument2):
+    if argument2 == 0 :
         print("sorry cannot divide by zero")
-        return arg2
+        return argument2
     else:
-        return(arg1/arg2)
+        return(argument1/argument2)
 
-def multiplication(arg1,arg2):
-    return(arg1*arg2)
+def multiplication(argument1,argument2):
+    return(argument1*argument2)
