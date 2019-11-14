@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-from datetime import datetime
-now = datetime.now()
-date_time = now.strftime("%m/%d/%Y %H:%M:%S")
+import datetime
 
-fichier = open("python.log", "a")
-fichier.write(str(date_time)+" test") 
-fichier.write('\n')
-fichier.write(str(date_time)+" salut")
-fichier.write('\n')
-fichier.close()
+def logthis(a):
+    fichier = open("python.log", "a")
+    date = datetime.datetime.now().strftime('%d-%b-%Y %H:%M:%S')
+    text = date + " " + str(a)
+    fichier.write(text+"\n")
+    fichier.close
