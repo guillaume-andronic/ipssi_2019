@@ -1,10 +1,11 @@
 #!/bin/bash
+dateday=$(date +%F:%R:%S)
 
-NOW=$(date +"%m-%d-%Y")
-if curl -s -I "www.google.com" >/dev/null ;then
-                 echo $(date +%Y-%m-%d:%H:%M:%S) + "internet ok" >> internet.log
-        else
-                 echo "internet FAIL" >> internet.log
-                 exit 2
-        fi
+site="www.google.com"
+if curl -s -I $site >/dev/null ;then
+	echo "$dateday internet ok" >> internet.log
+else
+	echo "$dateday internet FAIL" >> internet.log
+fi
 
+exit 0

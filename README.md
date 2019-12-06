@@ -1,5 +1,5 @@
 # ipssi_2019
-Git pour rendre exo
 ANDRONIC Guillaume
 
-Dans ce fichier il y a mes scripts ipssi
+Git pour rendre exercices
+
