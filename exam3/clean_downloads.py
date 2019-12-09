@@ -1,30 +1,26 @@
-"""
-import os, time, sys
-winuser = os.popen('/mnt/c/Windows/System32/cmd.exe /c "echo %USERNAME%"').read()
-#print(winuser)
-path_to_watch = "/mnt/c/Users/" + winuser[:-1] + "/Downloads/"
-"""
 #!/usr/bin/python3
+import sys
 import os
-
-winuser = os.popen('/mnt/c/Windows/System32/cmd.exe /c "echo %USERNAME%"').read()
-path_to_watch = "/mnt/c/Users/" + winuser[:-1] + "/Downloads/"
-list_files = os.listdir("/mnt/c/Users/" + winuser[:-1] + "/Downloads/")
-# list_files = os.listdir(".") # repertoire courant
-# print(list_files)
-print(type(list_files))
-"""
-print(list_files[0])
-print(list_files[1])
-"""
-print(list_files[0:99])
-# trouver la taille des fichiers
-list_files[0:99]
-# avec os.stat trouver la taille
-# os.stat(list_files[2]) #ne fonctionne pas car il manque le chemin
-os.stat("/mnt/c/Users/" + winuser[:-1] + "/Downloads/" + list_files[0:99]) # fonctionne ok
-print("toutes les informations du fichier: ", os.stat("/mnt/c/Users/" + winuser[:-1] + "/Downloads/" + list_files[0:99]))
-print("id du owner du fichier: ", os.stat("/mnt/c/Users/" + winuser[:-1] + "/Downloads/" + list_files[0:99]).st_uid)
-print("taille      du fichier: ", os.stat("/mnt/c/Users/" + winuser[:-1] + "/Downloads/" + list_files[0:99]).st_size)
-from pwd import getpwuid
-print("txt  owner  du fichier:", getpwuid(os.stat("/mnt/c/Users/" + winuser[:-1] + "/Downloads/" + list_files[0:99]).st_uid).pw_name)
+from datetime import datetime
+from datetime import timedelta
+def clean_downloads(path):
+    list_files = os.listdir(path)
+    strToPrint = "cleanup old files: (more than 10 days + 50MB)"
+    filesToDel = []
+    for aFile in list_files:
+        if os.stat(path+aFile).st_size > 1000000:
+            filesToDel.append(aFile)
+            continue
+        dateOfFile = datetime.fromtimestamp(os.stat(path+aFile).st_mtime)
+        tenDayOfDiff = (datetime.now())+timedelta(days=-10)
+        if dateOfFile < tenDayOfDiff:
+            filesToDel.append(aFile)
+            continue
+    if len(filesToDel) > 0:
+        print(strToPrint)
+        for aFileToDel in filesToDel:
+            print(aFileToDel)
+    return filesToDel
+    
+if __name__ == "__main__":
+    print(clean_downloads(sys.argv[1]))
